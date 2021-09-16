@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class, 'index'])->name('main');
+
+Route::post('/subscribe', [MainController::class, 'subscribe'])->name('main.subscribe');
+Route::get('/{region}/{id}', [MainController::class, 'getRegion'])->name('get.region');

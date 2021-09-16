@@ -1,0 +1,19 @@
+{
+    "name": "web/library",
+    "description": "Web Library",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stevan Iskandar",
+            "email": "stevan.iskandar@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Web\\Library\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
